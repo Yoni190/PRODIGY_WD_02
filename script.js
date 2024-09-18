@@ -1,4 +1,5 @@
 let screen = document.querySelector(".screen");
+let container = document.querySelector(".container");
 let start = document.getElementById("start");
 let watchInterval = null;
 
@@ -51,4 +52,11 @@ function resetWatch(){
     clearInterval(watchInterval);
     screen.textContent = "00:00:00";
     start.disabled = false;
+}
+
+function lap(){
+    const para = document.createElement("p");
+    const time = document.createTextNode(screen.textContent);
+    para.appendChild(time);
+    container.append(para);
 }
