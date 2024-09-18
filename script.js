@@ -1,5 +1,6 @@
 let screen = document.querySelector(".screen");
-
+let start = document.getElementById("start");
+let watchInterval = null;
 
 function startWatch(){
     let millisecond = 1;
@@ -9,7 +10,7 @@ function startWatch(){
     let msNum = `0${millisecond}`;
     let secNum = `0${second}`;
     let minNum = `0${minute}`;
-    setInterval(()=>{
+    watchInterval = setInterval(()=>{
         if(millisecond == 100){
             second++;
             if(second > 9){
@@ -43,5 +44,11 @@ function startWatch(){
         }
         millisecond++;
     }, 10);
-    
+    start.disabled = true;
 };
+
+function resetWatch(){
+    clearInterval(watchInterval);
+    screen.textContent = "00:00:00";
+    start.disabled = false;
+}
