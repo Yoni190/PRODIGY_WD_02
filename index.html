@@ -5,14 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>StopWatch</title>
     <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
 </head>
 <body>
-    <div class="container">
-        <div class="screen">00:00:00</div>
-        <div class="buttons">
-            <button>Start</button>
-            <button>Reset</button>
-            <button>Lap</button>
+    <div class="stopwatch">
+        <h1>StopWatch</h1>
+        <div class="container">
+            <div class="screen">00:00:00</div>
+            <div class="buttons">
+                <button class="start" onclick="startWatch()">Start</button>
+                <button class="reset" onclick="resetWatch()">Reset</button>
+                <button class="Lap" onclick="lap()">Lap</button>
+            </div>
         </div>
     </div>
 </body>
