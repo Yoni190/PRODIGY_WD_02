@@ -9,7 +9,7 @@ let watchInterval = null;
 let started = false;
 let isDarkMode = false;
 
-let millisecond = 1;
+let millisecond = 0;
 let second = 0;
 let minute = 0;
 
@@ -67,6 +67,15 @@ function startWatch(){
 function resetWatch(){
     clearInterval(watchInterval);
     screen.textContent = "00:00:00";
+    laps.textContent = '';
+    start.textContent = "Start";
+    started = false;
+    millisecond = 0;
+    second = 0;
+    minute = 0;
+    msNum = `0${millisecond}`;
+     secNum = `0${second}`;
+     minNum = `0${minute}`;
 };
 
 function lap(){
