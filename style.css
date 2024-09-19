@@ -42,3 +42,9 @@ button {
 .stopwatch {
     margin-top: 250px;
 }
+h1 {
+    display: inline;
+}
+.mode {
+    margin-left: 100px;
+}

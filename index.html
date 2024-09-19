@@ -8,8 +8,10 @@
     <script src="script.js" defer></script>
 </head>
 <body>
+    
     <div class="stopwatch">
-        <h1>StopWatch</h1>
+        <h1 class="title">StopWatch</h1>
+        <button class="mode" onclick="changeMode()">&#127769</button>
         <div class="container">
             <div class="screen">00:00:00</div>
             <div class="buttons">
@@ -17,6 +19,7 @@
                 <button id="reset" onclick="resetWatch()">Reset</button>
                 <button id="Lap" onclick="lap()">Lap</button>
             </div>
+            <div class="laps"></div>
         </div>
     </div>
 </body>
