@@ -82,7 +82,7 @@ function lap(){
     const para = document.createElement("p");
     const time = document.createTextNode(screen.textContent);
     para.appendChild(time);
-    laps.append(para);
+    laps.appendChild(para);
 };
 
 function changeMode() {
